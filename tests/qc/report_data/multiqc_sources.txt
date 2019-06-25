@@ -1,3 +1,0 @@
-Module	Section	Sample Name	Source
-FastQC	all_sections	A_R1	/home/tdayris/Documents/Developpement/rna-count-kallisto/tests/qc/fastqc/A_R1_fastqc.zip
-FastQC	all_sections	A_R2	/home/tdayris/Documents/Developpement/rna-count-kallisto/tests/qc/fastqc/A_R2_fastqc.zip
