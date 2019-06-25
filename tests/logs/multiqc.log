@@ -1,0 +1,14 @@
+/home/tdayris/Documents/Developpement/rna-count-kallisto/tests/.snakemake/conda/c97ad13a/lib/python3.6/site-packages/multiqc/utils/config.py:45: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  configs = yaml.load(f)
+/home/tdayris/Documents/Developpement/rna-count-kallisto/tests/.snakemake/conda/c97ad13a/lib/python3.6/site-packages/multiqc/utils/config.py:51: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  sp = yaml.load(f)
+[INFO   ]         multiqc : This is MultiQC v1.7 (0e8074e)
+[INFO   ]         multiqc : Template    : default
+[INFO   ]         multiqc : Searching 'qc/fastqc'
+[INFO   ]         multiqc : Searching 'pseudo_mapping'
+[INFO   ]         multiqc : Searching 'genome'
+[INFO   ]          fastqc : Found 2 reports
+[INFO   ]         multiqc : Compressing plot data
+[INFO   ]         multiqc : Report      : qc/report.html
+[INFO   ]         multiqc : Data        : qc/report_data
+[INFO   ]         multiqc : MultiQC complete

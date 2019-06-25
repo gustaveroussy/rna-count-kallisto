@@ -1,0 +1,3 @@
+Downstream_file	Sample_id	Upstream_file
+/home/tdayris/Documents/Developpement/rna-count-kallisto/tests/reads/A_R2.fastq	A_R1	/home/tdayris/Documents/Developpement/rna-count-kallisto/tests/reads/A_R1.fastq
+/home/tdayris/Documents/Developpement/rna-count-kallisto/tests/reads/B_R2.fastq	B_R1	/home/tdayris/Documents/Developpement/rna-count-kallisto/tests/reads/B_R1.fastq

@@ -1,0 +1,11 @@
+name: rna-count-kallisto
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python ==3.7
+  - datrie ==0.7.1
+  - git ==2.21.0
+  - pip:
+    - snakemake

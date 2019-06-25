@@ -1,0 +1,6 @@
+*.snakemake*
+*datasets*
+test/pseudo_mapping/
+test/qc/
+test/raw_data/
+test/logs/

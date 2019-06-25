@@ -1,0 +1,2 @@
+sample_id Upstream_file Downstream_file
+S1  path/to/up.fq.gz  /path/to/down.fq.gz

@@ -1,0 +1,16 @@
+design: design.tsv
+workdir: .
+threads: 1
+singularity_docker_image: docker://continuumio/miniconda3:4.4.10
+cold_storage:
+  - /media
+ref:
+  fasta: /path/to/genome/sequence.fa
+  gtf: /path/to/genome/annotaton.gtf
+workflow:
+  fastqc: true
+  multiqc: true
+  aggregate: true
+params:
+  kallisto_index_extra: "--make-unique"
+  kallisto_quant_extra: "--bias --bootstrap-samples=100"

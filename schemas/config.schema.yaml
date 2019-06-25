@@ -1,0 +1,70 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+description: Snakemake workflow for RNASeq read count
+
+properties:
+    design:
+        type: string
+        description: Path to design file
+        default: design.tsv
+    workdir:
+        type: string
+        description: Path to working directory
+        default: .
+    threads:
+        type: integer
+        description: Maximum number of threads used
+        default: 1
+    singularity_docker_image:
+        type: string
+        description: Image used within Singularity
+        default: docker://continuumio/miniconda3:4.4.10
+    cold_storage:
+        type: array
+        description: A list of path which are not open for intensive IO process
+        default: NONE
+        items:
+            type: string
+        uniqueItems: true
+        minItems: 1
+
+ref:
+  type: object
+  proprerties:
+    fasta:
+      type: string
+      description: A path to a fasta-formatted genome sequence
+    gtf:
+      type: string
+      description: A path to a GTF formatted genome annotation (NO GFF)
+  required:
+    - fasta
+
+params:
+  type: object
+  description: Optional arguments for each rule
+  copy_extra:
+      type: string
+      description: Extra parameters for bash cp
+      default: "--verbose --update"
+  kallisto_index_extra:
+      type: string
+      description: Extra parameters for kallisto index rule
+      default: "--make-unique"
+  kallisto_quant_extra:
+      type: string
+      description: Extra parameters for kallisto quant rule
+      default: "--bias --bootstrap-samples=100"
+  required:
+    - copy_extra
+    - kallisto_index_extra
+    - kallisto_quant_extra
+
+required:
+    - params
+    - ref
+    - workdir
+    - threads
+    - singularity_docker_image
+    - design
+    - cold_storage
