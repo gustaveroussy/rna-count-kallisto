@@ -12,5 +12,6 @@ workflow:
   multiqc: true
   aggregate: true
 params:
+  copy_extra: "--parents --verbose"
   kallisto_index_extra: "--make-unique"
   kallisto_quant_extra: "--bias --bootstrap-samples=100"
