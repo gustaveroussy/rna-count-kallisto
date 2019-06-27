@@ -6,4 +6,4 @@ Each tool belong to their respective authors.
 
 Currently under active development, this pipeline is not intended to be used.
 
-See the embedded [wiki](https://github.com/tdayris/rna-count-kallisto/wiki) for more information.
+See the embedded [wiki](https://github.com/gustaveroussy/rna-count-kallisto/wiki) for more information.
