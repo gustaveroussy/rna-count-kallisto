@@ -13,6 +13,7 @@ include: "rules/copy.smk"
 include: "rules/fastqc.smk"
 include: "rules/multiqc.smk"
 include: "rules/kallisto.smk"
+include: "rules/aggregation.smk"
 
 workdir: config["workdir"]
 singularity: config["singularity_docker_image"]

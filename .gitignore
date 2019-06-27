@@ -1,6 +1,8 @@
 *.snakemake*
 *datasets*
-test/pseudo_mapping/
-test/qc/
-test/raw_data/
-test/logs/
+tests/pseudo_mapping/
+tests/qc/
+tests/raw_data/
+tests/logs/
+tests/aggregated_kallisto_counts/
+tests/report.html

@@ -7,5 +7,7 @@ dependencies:
   - python ==3.7
   - datrie ==0.7.1
   - git ==2.21.0
+  - jinja2 ==2.10.1
+  - pygraphviz ==1.5h
   - pip:
     - snakemake

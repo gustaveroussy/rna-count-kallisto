@@ -1,0 +1,8 @@
+name: python_3_7
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python ==3.7
+  - pandas ==0.24.2
