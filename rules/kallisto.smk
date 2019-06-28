@@ -43,8 +43,8 @@ rule kallisto_quant:
     output:
         report(
             directory("pseudo_mapping/{sample}"),
-            caption="../report/counts.rst",
-            category="Counts"
+            caption="../report/kallisto.rst",
+            category="Sample Count"
         )
     message:
         "Quantifying {wildcards.sample} with Kallisto"

@@ -70,7 +70,4 @@ if __name__ == '__main__':
 
         print(data.head(), file=sys.stderr)
 
-        data.to_csv(
-            op.join(str(snakemake.output), f"merged_{column}.tsv"),
-            sep="\t"
-        )
+        data.to_csv(snakemake.output[column], sep="\t")

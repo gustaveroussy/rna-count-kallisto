@@ -7,7 +7,11 @@ rule fastqc:
     input:
         lambda wildcards: fq_root_dict[wildcards.sample]
     output:
-        html = "qc/fastqc/{sample}_fastqc.html",
+        html = report(
+            "qc/fastqc/{sample}_fastqc.html",
+            caption="../report/fastqc.rst",
+            category="Quality Controls"
+        ),
         zip = "qc/fastqc/{sample}_fastqc.zip"
     params:
         ""

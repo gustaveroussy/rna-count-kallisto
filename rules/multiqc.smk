@@ -17,13 +17,11 @@ rule multiqc:
         quants = expand(
             "pseudo_mapping/{sample}",
             sample=sample_id_list
-        ),
-        # Include fasta ref for reporting.
-        fasta = f"genome/{op.basename(config['ref']['fasta'])}"
+        )
     output:
         report(
             "qc/multiqc_report.html",
-            caption="../report/quality.rst",
+            caption="../report/multiqc.rst",
             category="Quality Controls"
         )
     params: ""

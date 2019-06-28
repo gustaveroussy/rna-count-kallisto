@@ -5,10 +5,15 @@ rule aggregate_kallisto_counts:
             sample=sample_id_list
         )
     output:
-        report(
-            directory("aggregated_kallisto_counts"),
-            caption="../report/aggregation.rst",
-            category="Aggregation"
+        est_counts = report(
+            "aggregated_kallisto_counts/merged_est_counts.tsv",
+            caption="../report/raw_counts.rst",
+            category="Aggregated Counts"
+        ),
+        tpm = report(
+            "aggregated_kallisto_counts/merged_tpm.tsv",
+            caption="../report/tpm.rst",
+            category="Aggregated Counts"
         )
     message:
         "Aggregating all kallisto abundancies"
