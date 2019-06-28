@@ -6,3 +6,6 @@ tests/raw_data/
 tests/logs/
 tests/aggregated_kallisto_counts/
 tests/report.html
+tests/*.png
+tests/*.html
+tests/*.stats*

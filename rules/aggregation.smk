@@ -5,7 +5,11 @@ rule aggregate_kallisto_counts:
             sample=sample_id_list
         )
     output:
-        directory("aggregated_kallisto_counts")
+        report(
+            directory("aggregated_kallisto_counts"),
+            caption="../report/aggregation.rst",
+            category="Aggregation"
+        )
     message:
         "Aggregating all kallisto abundancies"
     threads:

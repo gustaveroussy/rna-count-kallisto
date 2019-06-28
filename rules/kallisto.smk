@@ -41,7 +41,11 @@ rule kallisto_quant:
         unpack(fq_pairs_w),
         index = "pseudo_mapping/genome_index"
     output:
-        directory("pseudo_mapping/{sample}")
+        report(
+            directory("pseudo_mapping/{sample}"),
+            caption="../report/counts.rst",
+            category="Counts"
+        )
     message:
         "Quantifying {wildcards.sample} with Kallisto"
     resources:

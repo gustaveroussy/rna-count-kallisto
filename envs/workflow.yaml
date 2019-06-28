@@ -6,8 +6,9 @@ channels:
 dependencies:
   - python ==3.7
   - datrie ==0.7.1
-  - git ==2.21.0
+  - git ==2.20.1
   - jinja2 ==2.10.1
-  - pygraphviz ==1.5h
+  - pygraphviz ==1.5
+  - flask ==1.0.3
   - pip:
-    - snakemake
+    - snakemake ==5.5.0

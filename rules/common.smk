@@ -32,6 +32,8 @@ design = pd.read_csv(
 design.set_index(design["Sample_id"])
 validate(design, schema="../schemas/design.schema.yaml")
 
+report: "../report/general.rst"
+
 
 def fq_link() -> Dict[str, str]:
     """
@@ -213,13 +215,14 @@ def get_targets() -> Dict[str, Any]:
             ext=["html", "zip"]
         )
     if config["workflow"]["multiqc"] is True:
-        targets["multiqc"] = "qc/report.html"
+        targets["multiqc"] = "qc/multiqc_report.html"
     if config["workflow"]["aggregate"] is True:
         targets["aggregation"] = "aggregated_kallisto_counts"
     targets["quant"] = expand(
         "pseudo_mapping/{sample}",
         sample=sample_id_list
     )
+    print(targets, file=sys.stderr)
     return targets
 
 

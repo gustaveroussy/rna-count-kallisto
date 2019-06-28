@@ -68,7 +68,7 @@ if __name__ == '__main__':
             column=column
         )
 
-        print(data.head, file=sys.stderr)
+        print(data.head(), file=sys.stderr)
 
         data.to_csv(
             op.join(str(snakemake.output), f"merged_{column}.tsv"),

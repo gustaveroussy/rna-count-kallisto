@@ -6,5 +6,6 @@ python3.7 ../scripts/prepare_config.py genome/transcriptome.fasta --kallisto_ind
 
 python3.7 ../scripts/prepare_design.py reads/
 
-snakemake -s ../Snakefile --use-conda
-snakemake -s ../Snakefile --use-conda --report
+snakemake -s ../Snakefile --use-conda -j 4
+
+snakemake -s ../Snakefile --use-conda --report -j 4
