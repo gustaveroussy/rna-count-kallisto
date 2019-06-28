@@ -1,0 +1,30 @@
+<p><a href="https://github.com/gustaveroussy/rna-count-kallisto">rna-count-kallisto</a> is a <a href="https://github.com/snakemake-workflows">Snakemake Workflow</a>, it relies on the very same pre-requisites as <a href="https://snakemake.readthedocs.io/">Snakemake</a> itself. Thus, it uses <a href="https://docs.pytest.org/en/latest/">pytest</a> for its continuous testing. In addition, <a href="https://anaconda.org/">Conda</a> is used to power all tools installations and virtual environment management.</p>
+<h2 id="install-conda">1. Install conda</h2>
+<p>In order to install conda, please follow the guide lines described on the official <a href="https://docs.continuum.io/anaconda/install/">Conda web-page</a>.</p>
+<p>This will likely be:</p>
+<pre class="{sh}"><code># Conda pre-requisites
+apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+
+# Download latest conda installer
+wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
+
+# Run the installer
+bash ~/Downloads/Anaconda3-2019.03-Linux-x86_64.sh</code></pre>
+<h2 id="install-snakemake-pre-requisites-within-conda">2. Install Snakemake pre-requisites within Conda</h2>
+<p>We are going to use Python 3.7. No other options. Forget about python 2.7, it will be dropped out of support before 2020'. In <a href="https://github.com/gustaveroussy/rna-count-kallisto">rna-count-kallisto</a>, we use <a href="https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting">formatted strings</a> available at python 3.6. It is not excluded that further development will include python 3.7 exclusive behaviours. Go for latest python !</p>
+<p>However, old packages are still not available within <a href="https://pypi.org/">python package installer</a>. Especially, <code>datrie</code> fails to install within Python 3.7 pip module. So we need to install it first, then install Snakemake. That's also why there is not Conda environment for Snakemake with Python 3.7.</p>
+<p>Here we go:</p>
+<pre class="{sh}"><code># Build virtual environment for Snakemake workflows
+conda create -n SnakemakeWorkflows -c conda-forge datrie==0.7.1 python==3.7.3 pytest==4.5.0 git==2.21.0 drmaa==0.7.9
+
+# Activate this environment
+conda activate SnakemakeWorkflows
+
+# Install Snakemake with the newly installed python
+python3.7 -m pip install snakemake --user</code></pre>
+<p>Every single time you will use this pipeline, you have to activate that conda environment. The activation command will not be repeated everywhere in this wiki, so please, don't forget it!</p>
+<h2 id="clone-this-workflow">3. Clone this workflow</h2>
+<p>The final step to use this workflow is to clone it to your computer. This can be easily done with git (which you have installed in your virtual environment few seconds ago!</p>
+<p>Here we go:</p>
+<pre class="{sh}"><code>git clone https://github.com/gustaveroussy/rna-count-kallisto.git</code></pre>
+<p>Everything is installed. Please, see the next page about <a href="https://github.com/tdayris/rna-splicing-star-leafcutter/wiki/Configuration">configurations</a> before running. You can also see our [test] page if you want to test the <a href="https://github.com/tdayris/rna-splicing-star-leafcutter">rna-splicing-star-leafcutter</a> pipeline.</p>

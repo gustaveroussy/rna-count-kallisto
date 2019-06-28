@@ -1,0 +1,15 @@
+<h2 id="global-workflow">Global workflow</h2>
+<p>This workflows takes fastq files, genome sequences and annotations as input, and returns abundance estimates along side with optional quality metrics.</p>
+<h2 id="fastqc">FastQC</h2>
+<p><a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a> stands for FastQ Quality Control. There is no publication associated with this tool, however, it remains an inescapable classic in bioinformatics.</p>
+<p>This tool compiles a lot of informations about the raw reads obtained from sequencers. Actually, this tool does not perform any process <strong>required</strong> for the whole splicing analysis; however, it's a good practice.</p>
+<p>Citation: * Andrews, Simon. &quot;FastQC: a quality control tool for high throughput sequence data.&quot; (2010).</p>
+<h2 id="multiqc">MultiQC</h2>
+<p><a href="https://multiqc.info/">MultiQC</a>, just like FastQC, do not have any other purpose than quality metrics. It gathers all Flagstat and all FastQC individual metrics into one single report.</p>
+<p>Citation: * Ewels, Philip, et al. &quot;MultiQC: summarize analysis results for multiple tools and samples in a single report.&quot; Bioinformatics 32.19 (2016): 3047-3048.</p>
+<h2 id="kallisto">Kallisto</h2>
+<p><a href="https://pachterlab.github.io/kallisto/">Kallisto</a> is a program for quantifying abundances of transcripts from RNA-Seq data. It is based on pseudoalignment for rapidly determining the compatibility of reads with targets, without the need for alignment. Pseudoalignment of reads preserves the key information needed for quantification, and kallisto is therefore not only fast, but also as accurate as existing quantification tools. In fact, because the pseudoalignment procedure is robust to errors in the reads, in many benchmarks kallisto significantly outperforms existing tools.</p>
+<p>Citation: * Nicolas L Bray, Harold Pimentel, Páll Melsted and Lior Pachter, Near-optimal probabilistic RNA-seq quantification, Nature Biotechnology 34, 525–527 (2016), doi:10.1038/nbt.3519</p>
+<h2 id="snakemake">Snakemake</h2>
+<p><a href="https://snakemake.readthedocs.io">Snakemake</a> is a pipeline/workflow manager written in python. It is used to handle the tools interaction, dependencies, command lines and cluster reservation. It is the skeleton of this pipeline. This pipeline is powered by the <a href="https://snakemake-wrappers.readthedocs.io">Snakemake-Wrappers</a>, the <a href="https://github.com/snakemake-workflows">Snakemake Workflows</a>, and the <a href="https://anaconda.org">conda</a> project.</p>
+<p>Citation: * Köster, Johannes, and Sven Rahmann. &quot;Snakemake—a scalable bioinformatics workflow engine.&quot; Bioinformatics 28.19 (2012): 2520-2522.</p>
