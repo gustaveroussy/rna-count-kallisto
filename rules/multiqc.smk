@@ -1,6 +1,6 @@
 """
 This rule runs MultiQC in order to collect metrics on most of our tools and
-raw files: Fastq + STAR + Samtools. We need to include the fasta reference for
+raw files: Fastq + Kallisto. We need to include the fasta reference for
 the report option only.
 More information at:
 https://snakemake-wrappers.readthedocs.io/en/stable/wrappers/multiqc.html
