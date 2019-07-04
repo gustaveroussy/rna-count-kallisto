@@ -10,5 +10,7 @@ dependencies:
   - jinja2 ==2.10.1
   - pygraphviz ==1.5
   - flask ==1.0.3
+  - pip ==19.1.1
+  - pandas ==0.24.2
   - pip:
     - snakemake ==5.5.0
