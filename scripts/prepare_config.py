@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
     main_parser.add_argument(
         "--design",
-        help="Path to design file",
+        help="Path to design file (default: %(default)s)",
         type=str,
         metavar="PATH",
         default="design.tsv"
@@ -35,7 +35,7 @@ if __name__ == '__main__':
 
     main_parser.add_argument(
         "--workdir",
-        help="Path to working directory",
+        help="Path to working directory (default: %(default)s)",
         type=str,
         metavar="PATH",
         default="."
@@ -43,14 +43,14 @@ if __name__ == '__main__':
 
     main_parser.add_argument(
         "--threads",
-        help="Maximum number of threads used",
+        help="Maximum number of threads used (default: %(default)s)",
         type=int,
         default=1
     )
 
     main_parser.add_argument(
         "--singularity",
-        help="Docker/Singularity image",
+        help="Docker/Singularity image (default: %(default)s)",
         type=str,
         default="docker://continuumio/miniconda3:4.4.10"
     )
@@ -58,7 +58,7 @@ if __name__ == '__main__':
     main_parser.add_argument(
         "--cold_storage",
         help="Space separated list of absolute path to "
-             "cold storage mount points",
+             "cold storage mount points (default: %(default)s)",
         nargs="+",
         type=str,
         default=[" "]
@@ -66,7 +66,7 @@ if __name__ == '__main__':
 
     main_parser.add_argument(
         "--gtf",
-        help="Path to GTF-formatted genome annotation",
+        help="Path to GTF-formatted genome annotation (default: %(default)s)",
         default=None,
         type=str
     )
@@ -85,14 +85,15 @@ if __name__ == '__main__':
 
     main_parser.add_argument(
         "--kallisto_index_extra",
-        help="Extra parameters for kallisto index step",
+        help="Extra parameters for kallisto index step (default: %(default)s)",
         type=str,
         default="--make-unique"
     )
 
     main_parser.add_argument(
         "--kallisto_quant_extra",
-        help="Extra parameters for kallisto quantification step",
+        help="Extra parameters for kallisto quantification step "
+             "(default: %(default)s)",
         type=str,
         default="--bias --bootstrap-samples=100"
     )
