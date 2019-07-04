@@ -217,7 +217,10 @@ def get_targets() -> Dict[str, Any]:
     if config["workflow"]["multiqc"] is True:
         targets["multiqc"] = "qc/multiqc_report.html"
     if config["workflow"]["aggregate"] is True:
-        targets["aggregation"] = "aggregated_kallisto_counts"
+        targets["aggregation"] = [
+            "aggregated_kallisto_counts/merged_est_counts.tsv",
+            "aggregated_kallisto_counts/merged_tpm.tsv"
+        ]
     targets["quant"] = expand(
         "pseudo_mapping/{sample}",
         sample=sample_id_list
