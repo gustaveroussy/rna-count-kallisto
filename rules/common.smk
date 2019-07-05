@@ -182,7 +182,7 @@ def fq_pairs_w(wildcards) -> Dict[str, str]:
     """
     return {"fastq": fq_pairs_dict[wildcards.sample],
             "gtf": refs_pack_dict["gtf"],
-            "index": "pseudo_mapping/genome_index"}
+            "index": "kallisto_index/genome_index"}
 
 
 def sample_id() -> List[str]:

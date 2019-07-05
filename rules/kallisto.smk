@@ -9,7 +9,7 @@ rule kallisto_index:
     input:
         **refs_pack_dict
     output:
-        index = "pseudo_mapping/genome_index"
+        index = "kallisto_index/genome_index"
     message:
         "Indexing {input.fasta} with Kallisto"
     resources:
