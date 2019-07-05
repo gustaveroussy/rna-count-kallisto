@@ -146,7 +146,6 @@ def fq_pairs() -> Dict[str, str]:
             design["Sample_id"],
             design["Upstream_file"]
         )
-        raise
         return {
             name: [f"raw_data/{op.basename(fq1)}"]
             for name, fq1 in iterator
@@ -181,7 +180,9 @@ def fq_pairs_w(wildcards) -> Dict[str, str]:
     """
     Dynamic wildcards call for snakemake.
     """
-    return {"fastq": fq_pairs_dict[wildcards.sample]}
+    return {"fastq": fq_pairs_dict[wildcards.sample],
+            "gtf": refs_pack_dict["gtf"],
+            "index": "pseudo_mapping/genome_index"}
 
 
 def sample_id() -> List[str]:

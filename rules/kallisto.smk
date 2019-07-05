@@ -38,9 +38,7 @@ https://snakemake-wrappers.readthedocs.io/en/stable/wrappers/kallisto/quant.html
 """
 rule kallisto_quant:
     input:
-        unpack(fq_pairs_w),
-        index = "pseudo_mapping/genome_index",
-        gtf = refs_pack_dict["gtf"]
+        unpack(fq_pairs_w)
     output:
         report(
             directory("pseudo_mapping/{sample}"),
