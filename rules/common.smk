@@ -225,7 +225,6 @@ def get_targets() -> Dict[str, Any]:
         "pseudo_mapping/{sample}",
         sample=sample_id_list
     )
-    print(targets, file=sys.stderr)
     return targets
 
 
