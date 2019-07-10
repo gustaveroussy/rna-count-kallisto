@@ -59,7 +59,7 @@ def extract_field(*paths: List[str],
 
 
 if __name__ == '__main__':
-    makedirs(snakemake.output)
+    makedirs(os.path.dirname(snakemake.output["est_counts"]))
 
     for column in ["est_counts", "tpm"]:
         data = extract_field(
