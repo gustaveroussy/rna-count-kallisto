@@ -180,9 +180,13 @@ def fq_pairs_w(wildcards) -> Dict[str, str]:
     """
     Dynamic wildcards call for snakemake.
     """
-    return {"fastq": fq_pairs_dict[wildcards.sample],
-            "gtf": refs_pack_dict["gtf"],
-            "index": "kallisto_index/genome_index"}
+    try:
+        return {"fastq": fq_pairs_dict[wildcards.sample],
+                "gtf": refs_pack_dict["gtf"],
+                "index": "kallisto_index/genome_index"}
+    except KeyError:
+        return {"fastq": fq_pairs_dict[wildcards.sample],
+                "index": "kallisto_index/genome_index"}
 
 
 def sample_id() -> List[str]:

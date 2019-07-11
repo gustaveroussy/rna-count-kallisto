@@ -5,7 +5,7 @@ params:
   kallisto_index_extra: \-\-kmer-size=5
   kallisto_quant_extra: ''
 ref:
-  fasta: genomes/transcriptome.fasta
+  fasta: genome/transcriptome.fasta
   gtf: null
 singularity_docker_image: docker://continuumio/miniconda3:4.4.10
 threads: 1
